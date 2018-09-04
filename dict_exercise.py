@@ -2,11 +2,12 @@ start_msg = '''|---欢迎进入球员查询程序---|
 |---1、 查询球员资料---|
 |---2、 插入新的球员---|
 |---3、 删除已有球员---|
-|---4、 退出查询程序---|'''
+|---4、 退出查询程序---|
+|---5、 输出所有球员---|'''
 
 print(start_msg)
 
-support_num = ['1', '2', '3', '4', '?']
+support_num = ['1', '2', '3', '4', '5','?']
 AddresBook = {'kobe':'24', 'jordan':'23', 'james':'23', 'wade':'3', 'rose':'1', 'curry':'30'} #定义原始通讯录
 
 # def main(run_time):
@@ -23,6 +24,11 @@ while 1:
 	if temp == '4':
 		print("|---感谢使用球员查询程序---|")
 		break
+
+	if temp == '5':
+		print('-' * 10)
+		for player, num in AddresBook.items():
+			print(f"{player} number is {num}")
 
 	name = input("请输入球员姓名:")
 
